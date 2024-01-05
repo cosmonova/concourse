@@ -54,4 +54,8 @@ items:
       Encrypt all sensitive data at rest
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: |
+      Ensure all credentials used by your applications are not hard-coded
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
 
