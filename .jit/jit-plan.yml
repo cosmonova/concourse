@@ -28,4 +28,9 @@ items:
       accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
+  - name: >
+      Enable multi-factor authentication for all Human Identities with AWS
+      access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
 
