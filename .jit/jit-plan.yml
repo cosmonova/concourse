@@ -68,4 +68,7 @@ items:
   - name: Verify that the users of your AWS accounts have enabled MFA
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-mfa-cloud-providers.yml@latest
+  - name: Scan Kubernetes configuration files
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
 
