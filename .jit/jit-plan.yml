@@ -74,4 +74,7 @@ items:
   - name: Import AWS Security Hub Findings
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloud-security-posture-management.yml@latest
+  - name: Scan your Dockerfiles for vulnerabilities
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
 
