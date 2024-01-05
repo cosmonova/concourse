@@ -45,4 +45,9 @@ items:
       Restrict resources in public subnets
     uses: >-
       jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
+  - name: >
+      Only use protocols with encryption when transmitting sensitive data
+      outside of your VPC
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
 
