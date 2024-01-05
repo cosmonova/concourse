@@ -12,4 +12,11 @@ items:
       Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
+  - name: |
+      Implement the least permissive rules for all Amazon EC2 security groups
+    uses: >-
+      jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
+    input:
+      status: passed
+      note: tet
 
