@@ -33,4 +33,8 @@ items:
       access
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
+  - name: |
+      Rotate credentials regularly
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
 
