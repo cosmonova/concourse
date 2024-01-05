@@ -23,4 +23,9 @@ items:
       Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
+  - name: >
+      Enable multi-factor authentication (MFA) on the root user for all AWS
+      accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
 
