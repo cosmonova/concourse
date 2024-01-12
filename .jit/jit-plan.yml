@@ -1,6 +1,5 @@
 name: My plan
 level: beginner
-update_id: 658ecfcf-748b-4641-999b-780977d07728
 author: Jit
 version: 0.1
 owners:
@@ -10,52 +9,67 @@ references:
 tags: []
 items:
   - name: Ensure all credentials used by your applications are not hard-coded
-
-    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
   - name: Import AWS Security Hub Findings
-    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-cloud-security-posture-management.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloud-security-posture-management.yml@latest
   - name: Scan your code for vulnerabilities (SAST)
-    uses: jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
   - name: Scan your Dockerfiles for vulnerabilities
-    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
   - name: Scan your code dependencies for vulnerabilities (SCA)
     uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
   - name: Scan Kubernetes configuration files
-    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
   - name: Rotate credentials regularly
-
-    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
-  - name: Enable multi-factor authentication for all Human Identities with AWS access
-
-    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
+  - name: >-
+      Enable multi-factor authentication for all Human Identities with AWS
+      access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
   - name: Use strong password policy
-
-    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
   - name: Verify that the users of your AWS accounts have enabled MFA
-    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-mfa-cloud-providers.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-mfa-cloud-providers.yml@latest
   - name: Restrict resources in public subnets
-
-    uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
   - name: Implement the least permissive rules for all Amazon EC2 security groups
-
-    uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
     input:
       note: tet
       status: passed
   - name: Use root user only by exception
-
-    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
   - name: Remove access keys for the root user
-
-    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
-  - name: Enable multi-factor authentication (MFA) on the root user for all AWS accounts
-
-    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
+  - name: >-
+      Enable multi-factor authentication (MFA) on the root user for all AWS
+      accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
   - name: Encrypt all sensitive data at rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: >-
+      Only use protocols with encryption when transmitting sensitive data
+      outside of your VPC
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
+  - name: Scan your infrastructure-as-code (IaC) for misconfigurations
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
 
-    uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
-  - name: Only use protocols with encryption when transmitting sensitive data outside of your VPC
-
-    uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
